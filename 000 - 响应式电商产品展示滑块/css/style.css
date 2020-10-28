@@ -1,0 +1,123 @@
+body {
+    background: #eef8ff;
+}
+
+.box {
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px;
+    
+}
+
+.slibe-img {
+    height: 450px;
+    position: relative;
+}
+
+.slibe-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    /* 两端对齐，项目之间的间隔都相等 */
+    justify-content: space-between;
+    /* 交叉轴的中点对齐 */
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+.type {
+    display: flex;
+    /* 主轴为垂直方向，起点在上沿。 */
+    flex-direction: column;
+}
+
+.type a {
+    color: #222222;
+    margin: 5px 0px;
+    font-weight: 700;
+    /* 设置文本字符的间距 */
+    letter-spacing: .5px;
+    padding-right: 8px;
+}
+
+.type span {
+    color: rgba(26, 26, 26, .5);
+}
+
+.price {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    font-family: poppins;
+    letter-spacing: .5px;
+
+}
+
+.overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-color: rgba(92,95,236,0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buy-btn {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, .2);
+}
+
+.buy-btn:hover {
+    color: #FFF;
+    background-color: #f15fa3;
+    transition: all ease .3s;
+}
+
+.overlay {
+    visibility: hidden;
+}
+
+.slibe-img:hover .overlay {
+    visibility: visible;
+    animation: fade .5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
